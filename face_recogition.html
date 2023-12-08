@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Face Recognition Test</h1>
+    <input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
+    <button onclick="sendImage()">Recognize Face</button>
+    <div id="result">Result will be shown here</div>
+    <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 500px; margin-top: 20px;" />
+
+    <!-- Thêm Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
